@@ -14,7 +14,7 @@ module "sysdig-cs" {
     source = "git@github.com:draios/cs-terraform-modules.git"
 
     aws_region = var.AWS_REGION
-    vpc_name = "{$var.LAB_NAME}-vpc"
+    vpc_name = "${var.LAB_NAME}-vpc"
 
     cloudwatch_log_group_retention = 7
 
