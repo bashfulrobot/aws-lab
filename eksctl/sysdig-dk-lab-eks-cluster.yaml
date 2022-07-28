@@ -25,36 +25,36 @@ cloudWatch:
     enableTypes: ["*"]
 
 managedNodeGroups:
-#  - name: dev-node-group-1
-#    instanceType: t3.medium
-#    privateNetworking: true
-#    desiredCapacity: 1
-#    spot: true
-#    volumeSize: 30
-#    ssh:
-#      allow: true
-#  - name: dev-node-group-2
-#    instanceType: t3.medium
-#    desiredCapacity: 1
-#    privateNetworking: true
-#    spot: true
-#    volumeSize: 30
-#  - name: dev-node-group-3
-#    instanceType: t3.large
-#    privateNetworking: true
-#    desiredCapacity: 1
-#    spot: true
-#    volumeSize: 30
-#    ssh:
-#      allow: true
-#  - name: dev-node-group-4
-#    instanceType: m5n.xlarge
-#    privateNetworking: true
-#    desiredCapacity: 2
-#    spot: true
-#    volumeSize: 30
-#    ssh:
-#      allow: true
+  #  - name: dev-node-group-1
+  #    instanceType: t3.medium
+  #    privateNetworking: true
+  #    desiredCapacity: 1
+  #    spot: true
+  #    volumeSize: 30
+  #    ssh:
+  #      allow: true
+  #  - name: dev-node-group-2
+  #    instanceType: t3.medium
+  #    desiredCapacity: 1
+  #    privateNetworking: true
+  #    spot: true
+  #    volumeSize: 30
+  #  - name: dev-node-group-3
+  #    instanceType: t3.large
+  #    privateNetworking: true
+  #    desiredCapacity: 1
+  #    spot: true
+  #    volumeSize: 30
+  #    ssh:
+  #      allow: true
+  #  - name: dev-node-group-4
+  #    instanceType: m5n.xlarge
+  #    privateNetworking: true
+  #    desiredCapacity: 2
+  #    spot: true
+  #    volumeSize: 30
+  #    ssh:
+  #      allow: true
   - name: sysdig-dk-lab-group
     instanceType: m5n.large
     privateNetworking: true
@@ -64,8 +64,7 @@ managedNodeGroups:
     ssh:
       allow: true
 addons:
-- name: vpc-cni
-
+  - name: vpc-cni
 #gitops:
 #  flux:
 #    gitProvider: github
