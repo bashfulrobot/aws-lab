@@ -33,3 +33,4 @@ You will need to run the commands via Doppler to get the secrets injected. For e
     - metadata name
     - instance sizes
     - ensure `spot: true` is set
+- Once you are happy with the settings, run `eksctl create cluster -f sysdig-dk-lab-eks-cluster.yaml`
