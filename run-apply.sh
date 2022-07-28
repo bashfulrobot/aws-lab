@@ -1,3 +1,2 @@
 #!/usr/bin/env bash
-
-doppler run -- terraform apply
+doppler run --name-transformer tf-var -- terraform apply
