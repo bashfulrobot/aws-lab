@@ -1,0 +1,73 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+vpc:
+  publicAccessCIDRs: [0.0.0.0/0]
+  clusterEndpoints:
+    publicAccess: true
+    privateAccess: true
+  id: vpc-0f5e3f378a595eb33
+  subnets:
+    private:
+      us-west-2a:
+        id: subnet-061dc9dd8e012697f
+      us-west-2b:
+        id: subnet-01413c4b836c2af9e
+      us-west-2c:
+        id: subnet-09bc12786e6925221
+
+metadata:
+  name: sysdig-dk-lab
+  region: us-west-2
+
+cloudWatch:
+  clusterLogging:
+    enableTypes: ["*"]
+
+managedNodeGroups:
+#  - name: dev-node-group-1
+#    instanceType: t3.medium
+#    privateNetworking: true
+#    desiredCapacity: 1
+#    spot: true
+#    volumeSize: 30
+#    ssh:
+#      allow: true
+#  - name: dev-node-group-2
+#    instanceType: t3.medium
+#    desiredCapacity: 1
+#    privateNetworking: true
+#    spot: true
+#    volumeSize: 30
+#  - name: dev-node-group-3
+#    instanceType: t3.large
+#    privateNetworking: true
+#    desiredCapacity: 1
+#    spot: true
+#    volumeSize: 30
+#    ssh:
+#      allow: true
+#  - name: dev-node-group-4
+#    instanceType: m5n.xlarge
+#    privateNetworking: true
+#    desiredCapacity: 2
+#    spot: true
+#    volumeSize: 30
+#    ssh:
+#      allow: true
+  - name: sysdig-dk-lab-group
+    instanceType: m5n.large
+    privateNetworking: true
+    desiredCapacity: 2
+    spot: true
+    volumeSize: 30
+    ssh:
+      allow: true
+addons:
+- name: vpc-cni
+
+#gitops:
+#  flux:
+#    gitProvider: github
+#    flags:
+#      owner:
